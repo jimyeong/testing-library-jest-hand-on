@@ -24,7 +24,6 @@ export default function OrderDetailProvider(props) {
     const newOptionsCounts = { ...optionCounts };
 
     newOptionsCounts[optionType][itemName] = newItemCount;
-    console.log(newOptionsCounts);
     setOptionCounts(newOptionsCounts);
   }
   function resetOrder() {

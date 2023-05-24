@@ -25,15 +25,15 @@ export default function ScoopOption({ name, imagePath }) {
       <FormGroup>
         <FormLabel column xs={6} style={{ textAlign: "right" }}>
           {name}
+          <Col xs={5} style={{ textAlign: "left" }}>
+            <FormControl
+              type="number"
+              value={optionCounts.scoops[name] ? optionCounts.scoops[name] : 0}
+              onChange={onHandleChange}
+              isInvalid={isValid}
+            />
+          </Col>
         </FormLabel>
-        <Col style={{ textAlign: "left" }}>
-          <FormControl
-            type="number"
-            value={optionCounts.scoops[name] ? optionCounts.scoops[name] : 0}
-            onChange={onHandleChange}
-            isInvalid={isValid}
-          />
-        </Col>
       </FormGroup>
     </Col>
   );

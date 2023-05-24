@@ -12,18 +12,7 @@ export default function OptionEntry({ setOrderPhase }) {
   const orderDisabled = totals.scoops == 0;
   return (
     <div>
-      <h1>Design Your Sundae!</h1>
-      <h3>Scoops</h3>
-      <h3>${pricePerItem.scoops} each</h3>
-      <h3>Scoops total {formatCurrency(totals.scoops)}</h3>
-
       <Options optionType="scoops" />
-      <br />
-      <br />
-
-      <h3>Toppings</h3>
-      <h3>${pricePerItem.toppings} each</h3>
-      <h3>Toppings total {formatCurrency(totals.toppings)}</h3>
       <Options optionType="toppings" />
       <br />
       <br />

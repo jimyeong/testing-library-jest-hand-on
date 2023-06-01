@@ -14,15 +14,8 @@ export default function OptionEntry({ setOrderPhase }) {
     <div>
       <Options optionType="scoops" />
       <Options optionType="toppings" />
-      <br />
-      <br />
       <h2>Grand Total: {formatCurrency(totals.scoops + totals.toppings)}</h2>
-      <Button
-        disabled={orderDisabled}
-        onClick={() => {
-          setOrderPhase("review");
-        }}
-      >
+      <Button disabled={orderDisabled} onClick={() => setOrderPhase("review")}>
         Order Sundae!
       </Button>
     </div>
